@@ -6,13 +6,16 @@ This repository contains PyTorch implementation of the following paper: **A Tran
 
 ![model](./pic/model.png)
 
-<center class="half">
-    <img src="./pic/skip.png" width="40%"/><img src="./pic/heatmap.png" width="40%"/></center>
+
 
 ## Paper Introduction
 
 Anomaly detection is the task of detecting outliers from normal data. Numerous methods have been proposed to address this problem, including recent methods based on generative adversarial network(GAN). However, these methods are limited in capturing the long-range information in data due to the limited receptive field obtained by the convolution operation. The long-range information is crucial for producing distinctive representation for normal data belonging to different classes, while the local information is important for distinguishing normal data from abnormal data, if they belong to the same class. In this paper, we propose a novel Transformer-based architecture for anomaly detec-
 tion which has advantages in extracting features with global information representing different classes as well as the local details useful for capturing anomalies. In our design, we introduce self-attention mechanism into the generator of GAN to extract global semantic information, and also modify the skip-connection to capture local details in multi-scale from input data. The experiments on CIFAR10 and STL10 show that our method provides better performance on representing different classes as compared with the state-of-art CNN-based GAN methods. Experiments performed on MVTecAD and LBOT datasets show that the proposed method offers state-of-art results, outperforming the baseline method SAGAN by over 3% in terms of the AUC metric.
+
+<div align="center">
+    <img src="./pic/skip.png" width="40%"/><img src="./pic/heatmap.png" width="40%"/>
+</div>
 
 ## Installation
 
