@@ -7,7 +7,7 @@ This repository contains PyTorch implementation of the following paper: **A Tran
 ![model](./pic/model.png)
 
 <center class="half">
-    <img src="./pic/skip.png" width="50%"/><img src="./pic/heatmap.png" width="50%"/></center>
+    <img src="./pic/skip.png" width="40%"/><img src="./pic/heatmap.png" width="40%"/></center>
 
 ## Paper Introduction
 
