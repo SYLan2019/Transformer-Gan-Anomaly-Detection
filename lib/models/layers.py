@@ -2,10 +2,6 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 
-
-# from SoftPool import soft_pool2d, SoftPool2d
-
-# Taken from https://discuss.pytorch.org/t/is-there-any-layer-like-tensorflows-space-to-depth-function/3487/14
 class DepthToSpace(nn.Module):
 
     def __init__(self, block_size):

@@ -3,7 +3,6 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from .fcanet import MultiSpectralAttentionLayer
 
 
 # from SoftPool import soft_pool2d, SoftPool2d
@@ -38,7 +37,6 @@ class Down(nn.Module):
             nn.MaxPool2d(2),
             # SoftPool2d(),
             DoubleConv(in_channels, out_channels),
-            MultiSpectralAttentionLayer(out_channels, c2wh[out_channels], c2wh[out_channels])
         )
 
     def forward(self, x):
@@ -58,7 +56,6 @@ class Up(nn.Module):
         else:
             self.up = nn.ConvTranspose2d(in_channels, in_channels // 2, kernel_size=2, stride=2)
             self.conv = DoubleConv(in_channels, out_channels)
-        self.fca = MultiSpectralAttentionLayer(out_channels,c2wh[out_channels],c2wh[out_channels])
 
     def forward(self, x1, x2):
         x1 = self.up(x1)
